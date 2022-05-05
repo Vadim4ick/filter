@@ -1,0 +1,115 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: #faebd7;
+}
+
+.header {
+  padding: 20px 0;
+  margin-bottom: 48px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 12px 24px;
+  margin-right: 18px;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  position: relative;
+}
+
+.button:last-child {
+  margin-right: 0px;
+}
+
+.button:active {
+  bottom: -2px;
+}
+
+.button_type__all {
+  background-color: orange;
+}
+
+.button_type__cat {
+  background-color: green;
+}
+.button_type__dog {
+  background-color: red;
+}
+.button_type__bird {
+  background-color: blue;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.card {
+  width: calc(33.33333333333333333% - 72px);
+  margin: 36px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  overflow: hidden;
+  transition: 0.5s all;
+}
+.cat {
+  background-color: green;
+}
+.dog {
+  background-color: red;
+}
+.bird {
+  background-color: blue;
+}
+
+.hide {
+  animation-name: hide;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.anime {
+  transform: scale(0);
+  opacity: 0;
+}
+
+@keyframes hide {
+  0% {
+    visibility: visible;
+    height: 200px;
+  }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    max-width: 0;
+    font-size: 0;
+    margin: 0;
+  }
+}
